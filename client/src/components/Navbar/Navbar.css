@@ -1,0 +1,122 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(40, 40, 40);
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.navbar img {
+  width: 170px;
+  margin-top: 15px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 400px;
+}
+
+.navbar li {
+  list-style-type: none;
+}
+.welcome{
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: first baseline;
+  font-weight: 500;
+  color:rgba(255, 255, 255, 0.482);
+}
+.username{
+  font-size: 30px;
+  font-weight: 500;
+  color: rgba(90, 92, 94, 0.859); 
+  padding-left: 13px;
+}
+
+.navbar .nav-item  {
+  text-decoration: none;
+  font-size: 18px; /* Smaller font size */
+  font-weight: 400;
+  color: whitesmoke;
+  margin: 0 10px; /* Adjust margin for spacing */
+  position: relative;
+}
+
+.navbar .nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; /* Adjust this value to position the dot as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px; /* Diameter of the dot */
+  height: 3px; /* Diameter of the dot */
+  border-radius: 5px;
+  background-color: currentColor; /* Use the color of the text */
+  transition: width 0.3s ease, height 0.3s ease; /* Add transition for width and height */
+  transform-origin: center; /* Ensure transformation origin is centered */
+}
+
+.navbar .nav-item.active:hover::after {
+  width: 12px; /* Adjust width for hover effect */
+}
+
+.navbar .icon {
+  margin: 9px 10px; /* Adjust margin for spacing */
+}
+
+/* Example button styles */
+button {
+  display: inline-block;
+  padding: 10px 18px; /* Smaller padding */
+  font-size: 14px; /* Smaller font size */
+  font-weight: bold;
+  color: white;
+  background-color: rgb(72, 203, 247); /* Example background color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px; /* Example margin */
+}
+
+button:hover {
+  background-color: rgb(0, 150, 255); /* Example hover color */
+}
+
+button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+/* Media queries */
+@media screen and (max-width: 530px) {
+  .navbar .icon {
+    font-size: 8vw; /* Adjust font size for smaller screens */
+  }
+
+  .navbar .nav-item {
+    font-size: 4vw; /* Adjust font size for smaller screens */
+  }
+
+  .navbar .nav-item.active {
+    font-size: 4.5vw; /* Adjust font size for smaller screens */
+    text-decoration: underline;
+  }
+
+  .navbar ul {
+    min-width: 65vw;
+    margin: 10px;
+  }
+
+  /* Adjust button styles for smaller screens */
+  button {
+    font-size: 3.5vw; /* Adjust font size for smaller screens */
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}

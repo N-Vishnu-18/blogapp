@@ -1,0 +1,41 @@
+.home {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ccc; /* Light text color */
+}
+
+.homewelcome {
+  margin: 50px auto;
+  width: clamp(300px, 60%, 500px);
+  padding: 20px;
+  color: #eee; /* Lighter text color */
+  border-radius: 12px;
+  background-color: rgba(51, 51, 51, 0.9); /* Darker background with transparency */
+  backdrop-filter: blur(10px); /* Adjust blur radius as needed */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger box shadow */
+  text-align: center;
+}
+
+.homewelcome h1 {
+  font-size: 2.5vw; /* Smaller font size for responsiveness */
+  color: #ddd; /* Lighter heading color */
+  margin-bottom: 10px;
+}
+
+.homepage {
+  font-size: 20px; /* Smaller font size for responsiveness */
+  margin-top: 20px;
+}
+
+.homepage a {
+  color: #4aa3df; /* Calm blue color for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.homepage a:hover {
+  color: #2e76a2; /* Darker blue color on hover */
+}
