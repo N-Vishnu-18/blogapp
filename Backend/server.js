@@ -1,6 +1,7 @@
 // Create Express app
 const exp = require('express');
 const app = exp();
+const cors = require('cors');
 require('dotenv').config(); // Load environment variables
 const mongoClient = require('mongodb').MongoClient;
 
@@ -11,8 +12,8 @@ const authorAPP = require('./APIs/author-api');
 const path = require('path');
 
 // Deploy React build in this server
-app.use(exp.static(path.join(__dirname, '../client/build')));
 
+app.use(cors({ origin: true }));
 // To parse the body of the request object
 app.use(exp.json());
 
